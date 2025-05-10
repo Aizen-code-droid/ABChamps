@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sequence Game - Full Screen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Optional fine-tuning with custom size breakpoints */
+    @media (max-width: 480px) {
+      .letter-box {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 481px) {
+      .letter-box {
+        width: 300px;
+        height: 150px;
+        font-size: 50px;
+      }
+    }
+    
+  </style>
+</head>
+<body class="w-full h-screen bg-cover bg-center" style="background-image: url(sequence\ .jpg);">
+  <div class="flex justify-start p-4">
+    <span class="text-4xl font-extrabold text-white hover:text-blue-900 cursor-pointer"><a href="homepage.html"> < Back</span></a>
+  </div>
+
+
+
+  <div class="relative w-full h-full">
+    
+
+    <!-- Header -->
+    <div class="absolute top-0 left-0 w-full flex items-center  bg-white z-10">
+      <span class="text-2xl text-black">&larr;</span>
+      <h1 class="text-center flex-grow text-lg font-bold -ml-4" style="background-color :bisque;">SEQUENCE GAME</h1>
+    </div>
+
+    <!-- Image and Boxes -->
+    <div class="w-full h-full relative">
+      <img src="d81ab966-469a-4ea9-af35-64e0b2d23fd7.png" alt="Bee Game" class="w-full h-full object-contain" />
+
+      <!-- A -->
+      <div class="letter-box absolute top-[14%] left-[28%] bg-white text-red-600 font-bold border border-black flex items-center justify-center rounded text-4xl md:text-5xl">
+        A
+      </div>
+      
+      <!-- Blank -->
+      <div class="letter-box absolute top-[40%] left-[28%] bg-white text-black font-bold border border-black flex items-center justify-center rounded">
+        <input type="text" maxlength="1"
+        class="w-full h-full text-center border-none outline-none bg-transparent text-black font-bold placeholder-black text-4xl md:text-5xl"
+        placeholder="_">
+      </div>
+      
+      <!-- C -->
+      <div class="letter-box absolute bottom-[18%] left-[38%] bg-white text-red-600 font-bold border border-black flex items-center justify-center rounded text-4xl md:text-5xl">
+        C
+      </div>
+
+    <!-- Footer Button -->
+    <div class="absolute bottom-4 w-full flex justify-center">
+      <button class="bg-purple-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-800 transition">
+        <a href="Picture matching.html">Submit & Continue</a>
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
