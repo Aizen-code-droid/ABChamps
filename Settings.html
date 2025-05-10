@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - ABChamps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comic Neue', cursive;
+        }
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #3b82f6;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #3b82f6;
+        }
+        .settings-container {
+            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .settings-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .settings-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen">
+    <div class="flex justify-start p-4">
+        <span class="text-4xl font-extrabold text-black hover:text-gray-200 cursor-pointer"><a href="profilepage.html"> < Back</span></a>
+      </div>
+
+    <div class="container mx-auto px-4 py-8 max-w-2xl">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-600 mb-4">Settings</h1>
+            <div class="w-24 h-2 bg-yellow-400 mx-auto rounded-full"></div>
+        </header>
+
+        <!-- Settings List -->
+        <div class="settings-container rounded-2xl shadow-lg overflow-hidden">
+            <div class="settings-content">
+                <!-- Sound Setting -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-100">
+                    <div>
+                        <h2 class="text-lg md:text-xl font-medium text-gray-800">Sound</h2>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" checked class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                </div>
+
+                <!-- Vibration Setting -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-100">
+                    <div>
+                        <h2 class="text-lg md:text-xl font-medium text-gray-800">Vibration</h2>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                </div>
+
+                <!-- Theme Setting -->
+                <div class="p-6 border-b border-gray-100">
+                    <h2 class="text-lg md:text-xl font-medium text-gray-800 mb-3">Theme</h2>
+                    <div class="flex space-x-4">
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium">Light</button>
+                        <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300">Dark</button>
+                    </div>
+                </div>
+
+                <!-- Notifications Setting -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-100">
+                    <div>
+                        <h2 class="text-lg md:text-xl font-medium text-gray-800">Notifications</h2>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" checked class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                </div>
+
+                <!-- Invite Friends -->
+                <div class="p-6 border-b border-gray-100">
+                    <button class="w-full flex items-center justify-between">
+                        <h2 class="text-lg md:text-xl font-medium text-gray-800">Invite Your Friends</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Rate App -->
+                <div class="p-6">
+                    <button class="w-full flex items-center justify-between">
+                        <h2 class="text-lg md:text-xl font-medium text-gray-800">Rate US on Play Store</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-8 text-center text-gray-500 text-sm">
+            <p>© 2025 ABChamps. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

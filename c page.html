@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alphabet Learning - C Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+   html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+    body {
+      background-image: url(https://i.pinimg.com/736x/f0/ce/a6/f0cea60b6e0f9092da61814912b6bcda.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      h2 {
+        font-size: 4rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      h2 {
+        font-size: 6rem;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-center text-gray-800">
+
+  <!-- Top Navigation -->
+  <div class="flex justify-start p-4">
+    <span class="text-4xl font-extrabold text-black hover:text-gray-200 cursor-pointer"><a href ="homepage.html"> < Back</span></a>
+  </div>
+
+  <!-- Sound Control -->
+  <div class="flex items-center justify-center mb-6">
+    <div class="flex items-center border px-4 py-2 rounded-full bg-white bg-opacity-80 shadow-md">
+      <span class="mr-2 text-xl">🔊</span>
+      <span class="font-bold mr-2">Sound</span>
+      <input 
+        type="range" 
+        id="sound-range" 
+        class="w-28 h-2 bg-gray-300 rounded-full appearance-none cursor-pointer" 
+        min="0" 
+        max="100" 
+        value="100" 
+        step="1">
+      <span id="volume-label" class="ml-2 font-bold">100%</span>
+    </div>
+  </div>
+
+  <!-- Letter Cc Title -->
+  <h2 class="text-6xl md:text-9xl font-extrabold drop-shadow-lg mb-4">Cc</h2>
+
+  <!-- Images and Words with Larger Images and Text -->
+  <div class="flex flex-wrap justify-center gap-4 items-center mb-6 px-4">
+    <div class="bg-white bg-opacity-90 text-center p-4 rounded-xl shadow-lg w-36 sm:w-44">
+      <img src="https://i.pinimg.com/736x/0c/1f/f8/0c1ff8bad4efd7d89b683fc16a5ac31d.jpg" alt="Cat" class="w-20 sm:w-24 h-20 sm:h-24 mx-auto mb-3 rounded-md">
+      <p class="text-2xl sm:text-3xl font-bold"><span class="border px-1">C</span>at</p>
+    </div>
+    <div class="bg-white bg-opacity-90 text-center p-4 rounded-xl shadow-lg w-36 sm:w-44">
+      <img src="https://i.pinimg.com/736x/8c/92/b2/8c92b26f41d8935e3b459a94c70d6128.jpg" alt="Candle" class="w-20 sm:w-24 h-20 sm:h-24 mx-auto mb-3 rounded-md">
+      <p class="text-2xl sm:text-3xl font-bold"><span class="border px-1">C</span>andle</p>
+    </div>
+    <div class="bg-white bg-opacity-90 text-center p-4 rounded-xl shadow-lg w-36 sm:w-44">
+      <img src="https://i.pinimg.com/736x/4d/b4/f7/4db4f7f533173b27667acd3fb273e2d9.jpg" alt="Carrot" class="w-20 sm:w-24 h-20 sm:h-24 mx-auto mb-3 rounded-md">
+      <p class="text-2xl sm:text-3xl font-bold"><span class="border px-1">C</span>arrot</p>
+    </div>
+  </div>
+
+  <!-- Centered Square Letter Box with Larger C Icon -->
+  <div class="flex justify-center mb-6">
+    <div class="w-40 sm:w-56 h-40 sm:h-56 flex flex-col items-center justify-center border-4 border-white bg-white bg-opacity-90 rounded-xl shadow-lg">
+      <h1 class="text-6xl sm:text-7xl font-extrabold text-purple-700">C</h1>
+      <div class="w-12 sm:w-16 h-1 bg-purple-700 mt-2"></div>
+    </div>
+  </div>
+<!-- Navigation and Continue Buttons Side-by-Side -->
+<div class="flex items-center justify-center gap-4 mb-10">
+  <a href="b page.html" class="text-4xl font-bold text-black hover:text-gray-400">&laquo;</a>
+  <button class="bg-purple-700 text-white font-bold text-xl sm:text-2xl py-4 px-10 rounded-full shadow-lg hover:bg-purple-800 transition duration-300">
+    Continue
+  </button>
+</div>
+
+</body>
+</html>

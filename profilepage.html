@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Learning App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      background-color: #f0f9ff;
+    }
+    .menu-item {
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .menu-item:hover {
+      transform: translateX(5px);
+      background-color: #e0f2fe;
+    }
+    .locked-section {
+      position: relative;
+    }
+    .lock-sticker {
+      position: absolute;
+      right: 20px;
+      top: -15px;
+      opacity: 0;
+      transform: scale(0.5) rotate(-20deg);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      z-index: 10;
+      pointer-events: none;
+    }
+    .locked-section:hover .lock-sticker {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+    .locked-section:hover {
+      background-color: #fee2e2 !important;
+    }
+    .locked-text {
+      color: #9ca3af !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <button class="text-2xl"><a href="homepage.html"> < Back</button></a>
+        <h1 class="text-2xl md:text-3xl font-bold text-blue-700">PROFILE</h1>
+      </div>
+      <button>
+      <a href="editpofile.html"> <img src="https://i.pinimg.com/736x/57/72/ae/5772ae5895dbafd88f1ff406a5f4d1c2.jpg" alt="Koala" class="w-10 h-10"></a> 
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-6">
+    <!-- Profile Summary -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <div class="flex items-center space-x-4">
+        <img src="https://img.icons8.com/clouds/100/user.png" alt="User" class="w-16 h-16">
+        <div>
+          <h2 class="text-xl font-bold text-gray-800">John Doe</h2>
+          <p class="text-gray-600">Learned: <span class="font-bold text-blue-600">23/26</span> letters</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Items -->
+    <div class="grid grid-cols-1 gap-3">
+      <!-- Leaderboard -->
+      <a href="leaderboard.html" class="menu-item bg-white rounded-xl shadow-sm p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="bg-blue-100 p-3 rounded-lg">
+            <img src="https://img.icons8.com/color/48/leaderboard.png" alt="Leaderboard" class="w-6 h-6">
+          </div>
+          <span class="font-medium text-gray-800">Leaderboard</span>
+        </div> 
+        <span class="text-gray-400">→</span>
+      </a>
+
+      <!-- Help & Support -->
+      <a href="help&Support.html" class="menu-item bg-white rounded-xl shadow-sm p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="bg-green-100 p-3 rounded-lg">
+            <img src="https://img.icons8.com/color/48/help.png" alt="Help" class="w-6 h-6">
+          </div>
+          <span class="font-medium text-gray-800">Help & Support</span>
+        </div>
+        <span class="text-gray-400">→</span>
+      </a>
+
+      <!-- About Us -->
+      <a href="aboutus.html" class="menu-item bg-white rounded-xl shadow-sm p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="bg-purple-100 p-3 rounded-lg">
+            <img src="https://img.icons8.com/color/48/about.png" alt="About" class="w-6 h-6">
+          </div>
+          <span class="font-medium text-gray-800">About Us</span>
+        </div>
+        <span class="text-gray-400">→</span>
+      </a>
+
+      <!-- Settings -->
+      <a href="Settings.html" class="menu-item bg-white rounded-xl shadow-sm p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="bg-yellow-100 p-3 rounded-lg">
+            <img src="https://img.icons8.com/color/48/settings.png" alt="Settings" class="w-6 h-6">
+          </div>
+          <span class="font-medium text-gray-800">Settings</span>
+        </div>
+        <span class="text-gray-400">→</span>
+      </a>
+
+      <!-- Take Test (Locked) -->
+      <div class="locked-section menu-item bg-white rounded-xl shadow-sm p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="bg-red-100 p-3 rounded-lg">
+            <img src="https://img.icons8.com/color/48/test-passed.png" alt="Test" class="w-6 h-6">
+          </div>
+          <span class="font-medium locked-text">Take Test</span>
+        </div>
+        <span class="locked-text">🔒</span>
+        <img src="https://img.icons8.com/color/96/lock--v1.png" alt="Lock" class="lock-sticker w-12 h-12">
+      </div>
+
+      <!-- Rewards / Certificates (Locked) -->
+      <div class="locked-section menu-item bg-white rounded-xl shadow-sm p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="bg-pink-100 p-3 rounded-lg">
+            <img src="https://img.icons8.com/color/48/prize.png" alt="Rewards" class="w-6 h-6">
+          </div>
+          <span class="font-medium locked-text">Rewards / Certificates</span>
+        </div>
+        <span class="locked-text">🔒</span>
+        <img src="https://img.icons8.com/color/96/lock--v1.png" alt="Lock" class="lock-sticker w-12 h-12">
+      </div>
+
+      <!-- Feedback -->
+      <a href="Feedback.html" class="menu-item bg-white rounded-xl shadow-sm p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="bg-indigo-100 p-3 rounded-lg">
+            <img src="https://img.icons8.com/color/48/feedback.png" alt="Feedback" class="w-6 h-6">
+          </div>
+          <span class="font-medium text-gray-800">Feedback</span>
+        </div>
+        <span class="text-gray-400">→</span>
+      </a>
+
+      <!-- Log Out -->
+      <a href="login1.html" class="menu-item bg-white rounded-xl shadow-sm p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="bg-gray-100 p-3 rounded-lg">
+            <img src="https://img.icons8.com/color/48/exit.png" alt="Logout" class="w-6 h-6">
+          </div>
+          <span class="font-medium text-gray-800">Log Out</span>
+        </div>
+        <span class="text-gray-400">→</span>
+      </a>
+
+      <!-- Return to Home -->
+      <a href="homepage.html" class="menu-item bg-blue-50 rounded-xl shadow-sm p-4 flex items-center justify-between border border-blue-100">
+        <div class="flex items-center space-x-4">
+          <div class="bg-blue-100 p-3 rounded-lg">
+            <img src="https://img.icons8.com/color/48/home.png" alt="Home" class="w-6 h-6">
+          </div>
+          <span class="font-medium text-blue-700">Return to Home</span>
+        </div>
+        <span class="text-blue-400">→</span>
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>
